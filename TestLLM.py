@@ -7,10 +7,10 @@ import json
 st.title("API Text Generation with IBM Cloud")
 
 # Input token dari pengguna
-access_token = st.text_input("cpd-apikey-IBMid-694000ANSQ-2024-05-24T10:15:27Z:", type="password")
+access_token = st.text_input("Masukan Akses Token Anda:", type="password")
 
 # Input ulasan dari pengguna
-review_text = st.text_area("Hallo Nama saya M. Yusuf Badru Tamam:", height=200)
+review_text = st.text_area("Masukan Teks Ulasan Anda disini:", height=200)
 
 if st.button("Kirim Permintaan"):
     if not access_token:
