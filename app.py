@@ -1,18 +1,18 @@
-# Install library requests jika belum terinstal
+# Install the requests library if not already installed
 !pip install requests
 
 import requests
 import json
 
-# Mendefinisikan URL dan header untuk permintaan API
+# Define the URL and headers for the API request
 url = "https://us-south.ml.cloud.ibm.com/ml/v1/text/generation?version=2023-05-29"
 headers = {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
-    'Authorization': 'Bearer cpd-apikey-IBMid-694000ANSQ-2024-05-23T13:46:49Z' 
+    'Authorization': 'cpd-apikey-IBMid-694000ANSQ-2024-05-24T10:15:27Z'  # Replace with your actual token
 }
 
-# Membuat payload dengan struktur JSON yang sesuai
+# Define the payload with the appropriate JSON structure
 payload = {
     "input": (
         "Please provide top 5 bullet points in the review provided below.\n\n\nReview:\n"
@@ -63,8 +63,8 @@ payload = {
     }
 }
 
-# Mengirimkan permintaan POST ke API
+# Send the POST request to the API
 response = requests.post(url, headers=headers, data=json.dumps(payload))
 
-# Mencetak respons dari API
+# Print the response from the API
 print(response.json())
